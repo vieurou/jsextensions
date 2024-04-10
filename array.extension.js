@@ -10,9 +10,8 @@ Array.prototype.swap = function (index_A, index_B) {
  */
 
 Array.prototype.swap2Values = function () {
-	if (this.length != 2) 
-	{
-		console.warn("swap2Values : array length is not 2");
+	if (this.length != 2) {
+		console.warn('swap2Values : array length is not 2');
 		return;
 	}
 
@@ -23,9 +22,8 @@ Array.prototype.swap2Values = function () {
 
 /** extension du type Position venant de geoJSON */
 Array.prototype.swapCoordonatesValues = function () {
-	if (this.length != 2) 
-	{
-		console.warn("swap2Values : array length is not 2");
+	if (this.length != 2) {
+		console.warn('swap2Values : array length is not 2');
 		return;
 	}
 	let temp = this[0];
@@ -35,4 +33,4 @@ Array.prototype.swapCoordonatesValues = function () {
 
 Array.prototype.removeDuplicates = function () {
 	return this.filter((value, index, self) => self.indexOf(value) === index);
-}
+};

@@ -456,7 +456,7 @@ String.prototype.isJson = function () {
 //retourne un booleen pour savoir si le string est un email
 String.prototype.isEmail = function () {
 	//return /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/.test(this);
-    return /^[\w-.]+@([\w-]+\.)+[\w-]{2,4}$/.test(this);
+	return /^[\w-.]+@([\w-]+\.)+[\w-]{2,4}$/.test(this);
 };
 
 //retourne un booleen pour savoir si le string est un url
