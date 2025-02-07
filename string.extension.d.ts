@@ -85,6 +85,7 @@ declare global {
     isBefore(date: string | Date): boolean;
     isAfter(date: string | Date): boolean;
     limitToLength(length): string;
+    formatDate(): string;
   }
 }
 

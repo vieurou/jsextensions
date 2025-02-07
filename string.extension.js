@@ -547,6 +547,10 @@ String.prototype.toDateTime = function () {
   }
 };
 
+/**
+ * Convertit un string au format 'YYYYMMDD' ou 'YYYYMMDDHHMMSSMMM' en un objet Date
+ * @returns {Date|null} l'objet Date correspondant au string, ou null si le string n'est pas au bon format
+ */
 String.prototype.toDate = function () {
   try {
     if (!this.isNumber() && !(this.length === 8)) {
@@ -608,3 +612,15 @@ String.prototype.isAfter = function (date) {
     return null;
   }
 };
+
+/**
+ * Converts a date string or Date object to a formatted string 'YYYY-MM-DD'.
+ * If the input is invalid or undefined, returns an empty string.
+ *
+ * @param {string|Date} date - The date to format.
+ * @returns {string} The formatted date string or an empty string if the input is invalid.
+ */
+String.prototype.formatDate = function () {
+  const d = new Date(this);
+  return isNaN(d.getTime()) ? '' : d.toISOString().split('T')[0];
+}
